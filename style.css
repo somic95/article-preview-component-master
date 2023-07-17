@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Manrope", sans-serif;
+    font-size: 13px;
+    color: hsl(217, 19%, 35%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    color: hsl(214, 17%, 51%);
+    line-height: 1.8;
+}
+
+ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.container {
+    background-color: white;
+    width: 375px;
+    max-width: 90%;
+    border-radius: 15px;
+    height: auto;
+
+    position: relative;
+}
+
+/* start section-img */
+.container .section-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+/* end section-img */
+
+/* start section-text content */
+.container .section-content p {
+    margin: 0 1.8rem 0 1.8rem;
+}
+/* end section-text content */
+
+/* start share-area section */
+.avatar-section .clicked {
+    display: none;
+}
+
+.avatar-section .clicked.active {
+    display: flex;
+    background-color: hsl(217, 19%, 35%);
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    width: 100%;
+}
+
+.avatar-section .clicked p {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    
+}
+
+.avatar-section .clicked ul {
+    display: flex;
+    align-items: center;
+    margin-left: -7rem;
+}
+
+.avatar-section .clicked ul li {
+    margin-right: 15px;
+}
+
+.avatar-section .clicked .arrow2 {
+    margin-right: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+/* end share-area section */
+
+/* start avatar-img and arrow-img area */
+.avatar-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 1.8rem 2rem 1.8rem;
+}
+
+.avatar-info .avatar-img img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 1.2rem;
+}
+
+.avatar-info .avatar-img {
+    display: flex;
+    align-items: center;
+}
+
+.avatar-info .avatar-text p {
+    color: hsl(212, 23%, 69%);
+}
+
+.avatar-info .arrow1 {
+    cursor: pointer;
+}
+/* end avatar-img and arrow-img area */
+
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        width: 750px;
+    }
+
+    .container .section-img img {
+        width: 250px;
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+    }
+
+    .avatar-section .clicked.active {
+        background-color: hsl(217, 19%, 35%);
+        padding: 1rem 0;
+        border-radius: 10px;
+        position: absolute;
+        width: 250px;
+        right: -12%;
+        top: 45%;
+    }
+
+    .avatar-section .clicked.active ul {
+        padding-left: 6.5rem;
+    }
+
+    .avatar-section .clicked.active::after {
+        position: absolute;
+        top: 80%;
+        left: 40%;
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: solid 25px hsl(217, 19%, 35%);
+        border-left: solid 25px transparent;
+        border-right: solid 25px transparent;
+    }
+
+    .arrow2 {
+        visibility: hidden;
+    }
+}
+
+
